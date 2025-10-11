@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrutha Platinum Towers - Ready to Move-In Premium Apartments</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'amrutha-blue': '#1E40AF',
+                        'amrutha-orange': '#F97316',
+                        'amrutha-dark-blue': '#1E3A8A'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Top Header -->
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center mr-3">
+                            <i class="fas fa-feather text-white text-lg"></i>
+                        </div>
+                        <div>
+                            <div class="text-sm font-bold text-gray-800">AMRUTHA RAGA</div>
+                            <div class="text-xs text-gray-600">CONSTRUCTIONS PVT. LTD.</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Call Us -->
+                <div class="hidden md:flex items-center text-blue-600">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span class="font-semibold">Call Us</span>
+                    <span class="ml-2 font-bold">+91 90350 86850</span>
+                </div>
+                
+                <!-- Mobile Hamburger -->
+                <button id="mobileMenuButton" onclick="toggleMobileMenu()" class="md:hidden inline-flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Navigation -->
+            <nav class="hidden md:flex justify-center space-x-8 py-4 border-t border-gray-200">
+                <a href="#overview" class="text-gray-700 hover:text-blue-600 transition">Overview</a>
+                <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition">Price List</a>
+                <a href="#floorplan" class="text-gray-700 hover:text-blue-600 transition">Floor Plan</a>
+                <a href="#gallery" class="text-gray-700 hover:text-blue-600 transition">Gallery</a>
+                <a href="#location" class="text-gray-700 hover:text-blue-600 transition">Location</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="md:hidden bg-white border-t border-gray-200 shadow-lg hidden">
+            <div class="px-4 py-4 space-y-3">
+                <div class="flex items-center text-blue-600 mb-4">
+                    <i class="fas fa-phone mr-2"></i>
+                    <span class="font-semibold">Call Us: +91 90350 86850</span>
+                </div>
+                <a href="#overview" class="block py-2 text-gray-700 hover:text-blue-600">Overview</a>
+                <a href="#pricing" class="block py-2 text-gray-700 hover:text-blue-600">Price List</a>
+                <a href="#floorplan" class="block py-2 text-gray-700 hover:text-blue-600">Floor Plan</a>
+                <a href="#gallery" class="block py-2 text-gray-700 hover:text-blue-600">Gallery</a>
+                <a href="#location" class="block py-2 text-gray-700 hover:text-blue-600">Location</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10 min-h-screen flex items-center">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <!-- Left Content -->
+                    <div class="text-white">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-6">AMRUTHA PLATINUM TOWERS</h1>
+                        <p class="text-lg md:text-xl mb-8 leading-relaxed">
+                            Ready to Move-In Premium Apartments by Amrutha Constructions in Nallurahalli Siddapura Road, Whitefield, East Bangalore
+                        </p>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition">
+                            DOWNLOAD BROCHURE >>>
+                        </button>
+                    </div>
+                    
+                    <!-- Right Form -->
+                    <div class="bg-white rounded-lg shadow-2xl p-6 lg:p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">DOWNLOAD BROCHURE Now!</h3>
+                        <form class="space-y-4">
+                            <div class="relative">
+                                <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="text" placeholder="Name" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="tel" placeholder="Phone" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div class="relative">
+                                <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="email" placeholder="Email" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-lg font-bold text-lg transition">
+                                DOWNLOAD BROCHURE >>>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview Section -->
+    <section id="overview" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">PROJECT OVERVIEW</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Amrutha Platinum Towers</h3>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Apartments</h3>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-4">
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="font-semibold">Project Location:</span>
+                            <span class="text-gray-600">Nallurahalli Siddapura Road, Whitefield, East Bangalore</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="font-semibold">Total Land Area:</span>
+                            <span class="text-gray-600">2 Acres 24 Guntas (Approx.)</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="font-semibold">No. of Units:</span>
+                            <span class="text-gray-600">408 Apartments</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="font-semibold">No. of Floors:</span>
+                            <span class="text-gray-600">G+7 Floors</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="font-semibold">Unit Variants:</span>
+                            <span class="text-gray-600">2BHK, 2.5BHK, 3BHK</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="font-semibold">Possession Time:</span>
+                            <span class="text-gray-600">Ready to move-in</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-gray-200">
+                            <span class="font-semibold">RERA Registration Number:</span>
+                            <span class="text-gray-600">PRM/KA/RERA/1251/446/PR/180406/001515</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">PRICING</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- 2 BHK Card -->
+                <div class="bg-blue-600 rounded-lg p-8 text-white text-center">
+                    <h3 class="text-2xl font-bold mb-2">2 BHK</h3>
+                    <p class="text-lg mb-4">Amrutha Platinum Towers</p>
+                    <div class="text-3xl font-bold mb-2">₹ 1.15Cr</div>
+                    <div class="text-sm mb-6">1064 - 1348 Sq.Ft.</div>
+                </div>
+                
+                <!-- 2.5 BHK Card -->
+                <div class="bg-blue-600 rounded-lg p-8 text-white text-center">
+                    <h3 class="text-2xl font-bold mb-2">2.5 BHK</h3>
+                    <p class="text-lg mb-4">Amrutha Platinum Towers</p>
+                    <div class="text-3xl font-bold mb-2">₹ 1.43Cr</div>
+                    <div class="text-sm mb-6">1348 - 1511 Sq.Ft.</div>
+                </div>
+                
+                <!-- 3 BHK Card -->
+                <div class="bg-blue-600 rounded-lg p-8 text-white text-center">
+                    <h3 class="text-2xl font-bold mb-2">3 BHK</h3>
+                    <p class="text-lg mb-4">Amrutha Platinum Towers</p>
+                    <div class="text-3xl font-bold mb-2">₹ 1.65Cr</div>
+                    <div class="text-sm mb-6">1511 - 1616 Sq.Ft.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Site Visit Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-8">Schedule Your Site-Visit to Amrutha Platinum Towers</h2>
+            
+            <!-- Countdown Timer -->
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <div class="grid grid-cols-4 gap-4 text-center">
+                    <div class="bg-blue-600 text-white rounded-lg p-4">
+                        <div class="text-3xl font-bold" id="days">00</div>
+                        <div class="text-sm">Days</div>
+                    </div>
+                    <div class="bg-blue-600 text-white rounded-lg p-4">
+                        <div class="text-3xl font-bold" id="hours">06</div>
+                        <div class="text-sm">Hours</div>
+                    </div>
+                    <div class="bg-blue-600 text-white rounded-lg p-4">
+                        <div class="text-3xl font-bold" id="minutes">29</div>
+                        <div class="text-sm">Minutes</div>
+                    </div>
+                    <div class="bg-blue-600 text-white rounded-lg p-4">
+                        <div class="text-3xl font-bold" id="seconds">53</div>
+                        <div class="text-sm">Seconds</div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition">
+                SCHEDULE MY SITE-VISIT
+            </button>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">AMENITIES</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Swimming Pool, Kids Pool, Gym, Party Hall, Play Area, Badminton Court, Half Basketball Court, 
+                    Jogging Track, Elder's Park, Open Gym, Table Tennis & Many More.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Plan Section -->
+    <section id="floorplan" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">MASTER PLAN</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-gray-600 mb-2">Master Plan</div>
+                            <div class="text-gray-500">Detailed Layout View</div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-gray-300 h-32 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-gray-600">Floor Plan</div>
+                            </div>
+                        </div>
+                        <div class="bg-gray-300 h-32 rounded-lg flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="text-lg font-bold text-gray-600">Building View</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">GALLERY</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-600 mb-2">Exterior View</div>
+                        <div class="text-gray-500">Building & Landscaping</div>
+                    </div>
+                </div>
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-600 mb-2">Swimming Pool</div>
+                        <div class="text-gray-500">Pool Area & Amenities</div>
+                    </div>
+                </div>
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-600 mb-2">Entrance Gate</div>
+                        <div class="text-gray-500">Main Entrance</div>
+                    </div>
+                </div>
+                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-gray-600 mb-2">Night View</div>
+                        <div class="text-gray-500">Illuminated Building</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Map Section -->
+    <section id="location" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">LOCATION MAP</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Map -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center mb-4">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-gray-600 mb-2">Interactive Map</div>
+                            <div class="text-gray-500">AMRUTHA PLATINUM TOWERS</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Proximities -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-6">Key Proximities</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-school text-blue-600 mr-3"></i>
+                            <span class="text-gray-700">Sri Chaitanya Techno School - 4.8 km</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-shopping-cart text-blue-600 mr-3"></i>
+                            <span class="text-gray-700">Prestige Forum Shantiniketan - 3.1 km</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt text-blue-600 mr-3"></i>
+                            <span class="text-gray-700">Varthur Road - 1.0 km</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-hospital text-blue-600 mr-3"></i>
+                            <span class="text-gray-700">Manipal Hospital - 3.5 km</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-building text-blue-600 mr-3"></i>
+                            <span class="text-gray-700">ITPL Road - 5.0 km</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Sections -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-8">
+                <!-- About Amrutha Platinum Towers -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <button onclick="toggleAccordion('about1')" class="w-full flex justify-between items-center text-left">
+                        <h3 class="text-xl font-bold text-gray-800">About Amrutha Platinum Towers</h3>
+                        <i id="icon1" class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div id="about1" class="hidden mt-4 text-gray-700">
+                        <p>Amrutha Platinum Towers offers ready-to-move-in premium apartments with modern amenities and excellent connectivity in Whitefield, Bangalore.</p>
+                    </div>
+                </div>
+                
+                <!-- About Amrutha Constructions -->
+                <div class="bg-gray-50 rounded-lg p-6">
+                    <button onclick="toggleAccordion('about2')" class="w-full flex justify-between items-center text-left">
+                        <h3 class="text-xl font-bold text-gray-800">About Amrutha Constructions</h3>
+                        <i id="icon2" class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div id="about2" class="hidden mt-4 text-gray-700">
+                        <p>Amrutha Constructions is a trusted name in real estate development, committed to delivering quality homes with modern amenities and excellent customer service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instant Callback Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <div class="flex items-center justify-center mb-4">
+                    <i class="fas fa-phone text-blue-600 text-3xl mr-4"></i>
+                    <h2 class="text-3xl font-bold text-gray-800">INSTANT CALLBACK</h2>
+                </div>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
+                <form class="space-y-4">
+                    <input type="text" placeholder="Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="tel" placeholder="Phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-lg font-bold text-lg transition">
+                        REQUEST INSTANT CALLBACK
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- CREDAI Logo -->
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center mb-4">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                        <span class="text-gray-900 font-bold">C</span>
+                    </div>
+                    <span class="text-lg font-semibold">MEMBER OF CREDAI BENGALURU</span>
+                </div>
+            </div>
+            
+            <!-- Disclaimer -->
+            <div class="mb-8">
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    <strong>Disclaimer:</strong> The content on this website is for information purposes only. Prices, specifications, and availability are subject to change without notice. 
+                    Images are for representation purposes only. Please verify all details before making any decisions.
+                </p>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div class="text-sm text-gray-400">
+                    © 2023 Amrutha Constructions. All Rights Reserved.
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <div class="w-16 h-8 bg-gray-700 rounded flex items-center justify-center">
+                        <span class="text-xs text-gray-400">Protected by CopyScape</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Buttons -->
+    <div class="fixed bottom-6 left-6 z-50">
+        <button class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition mb-4">
+            <i class="fab fa-whatsapp text-xl"></i>
+        </button>
+    </div>
+    
+    <div class="fixed bottom-6 right-6 z-50">
+        <button class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition">
+            <i class="fas fa-phone text-xl"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
