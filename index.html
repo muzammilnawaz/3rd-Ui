@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,50 +21,43 @@
         }
     </script>
 </head>
+
 <body class="font-sans">
     <!-- Header Section -->
     <header class="bg-white shadow-sm fixed w-full top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Top Header -->
-            <div class="flex items-center justify-between h-16">
+            <div class="flex items-center py-12 justify-between h-16">
                 <!-- Logo -->
-                <div class="flex items-center">
-                    <div class="flex items-center">
-                        <div class="w-10 h-10 bg-gradient-to-r from-blue-600 to-blue-800 rounded-full flex items-center justify-center mr-3">
-                            <i class="fas fa-feather text-white text-lg"></i>
-                        </div>
-                        <div>
-                            <div class="text-sm font-bold text-gray-800">AMRUTHA RAGA</div>
-                            <div class="text-xs text-gray-600">CONSTRUCTIONS PVT. LTD.</div>
-                        </div>
+
+                <div class="flex items-center h-full  justify-between w-full">
+
+                    <div class="py-10">
+                        <img src="logo.png" alt="Logo" class="h-[90px]" />
+                    </div>
+
+
+                    <nav class="hidden md:flex justify-center space-x-8 py-4">
+                        <a href="#overview" class="text-gray-700 hover:text-blue-600 transition">Overview</a>
+                        <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition">Price List</a>
+                        <a href="#floorplan" class="text-gray-700 hover:text-blue-600 transition">Floor Plan</a>
+                        <a href="#gallery" class="text-gray-700 hover:text-blue-600 transition">Gallery</a>
+                        <a href="#location" class="text-gray-700 hover:text-blue-600 transition">Location</a>
+                    </nav>
+                    <div class="hidden md:flex items-center text-blue-600">
+                        <button class="whatsapp rounded py-2 px-4 bg-green-500 text-white font-semibold">Call
+                            Us</button>
                     </div>
                 </div>
-                
-                <!-- Call Us -->
-                <div class="hidden md:flex items-center text-blue-600">
-                    <i class="fas fa-phone mr-2"></i>
-                    <span class="font-semibold">Call Us</span>
-                    <span class="ml-2 font-bold">+91 90350 86850</span>
-                </div>
-                
-                <!-- Mobile Hamburger -->
-                <button id="mobileMenuButton" onclick="toggleMobileMenu()" class="md:hidden inline-flex items-center justify-center w-10 h-10 text-gray-700 hover:text-blue-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+
+
+
             </div>
-            
+
             <!-- Navigation -->
-            <nav class="hidden md:flex justify-center space-x-8 py-4 border-t border-gray-200">
-                <a href="#overview" class="text-gray-700 hover:text-blue-600 transition">Overview</a>
-                <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition">Price List</a>
-                <a href="#floorplan" class="text-gray-700 hover:text-blue-600 transition">Floor Plan</a>
-                <a href="#gallery" class="text-gray-700 hover:text-blue-600 transition">Gallery</a>
-                <a href="#location" class="text-gray-700 hover:text-blue-600 transition">Location</a>
-            </nav>
+
         </div>
-        
+
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="md:hidden bg-white border-t border-gray-200 shadow-lg hidden">
             <div class="px-4 py-4 space-y-3">
@@ -81,7 +75,8 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen bg-cover bg-center bg-no-repeat" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
+    <section class="relative min-h-screen bg-cover bg-center bg-no-repeat"
+        style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');">
         <div class="absolute inset-0 bg-black bg-opacity-40"></div>
         <div class="relative z-10 min-h-screen flex items-center">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
@@ -90,30 +85,39 @@
                     <div class="text-white">
                         <h1 class="text-4xl md:text-6xl font-bold mb-6">AMRUTHA PLATINUM TOWERS</h1>
                         <p class="text-lg md:text-xl mb-8 leading-relaxed">
-                            Ready to Move-In Premium Apartments by Amrutha Constructions in Nallurahalli Siddapura Road, Whitefield, East Bangalore
+                            Ready to Move-In Premium Apartments by Amrutha Constructions in Nallurahalli Siddapura Road,
+                            Whitefield, East Bangalore
                         </p>
-                        <button class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition">
+                        <button
+                            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition">
                             DOWNLOAD BROCHURE >>>
                         </button>
                     </div>
-                    
+
                     <!-- Right Form -->
                     <div class="bg-white rounded-lg shadow-2xl p-6 lg:p-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6">DOWNLOAD BROCHURE Now!</h3>
                         <form class="space-y-4">
                             <div class="relative">
-                                <i class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                                <input type="text" placeholder="Name" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <i
+                                    class="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="text" placeholder="Name"
+                                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div class="relative">
-                                <i class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                                <input type="tel" placeholder="Phone" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <i
+                                    class="fas fa-phone absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="tel" placeholder="Phone"
+                                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
                             <div class="relative">
-                                <i class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
-                                <input type="email" placeholder="Email" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <i
+                                    class="fas fa-envelope absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                                <input type="email" placeholder="Email"
+                                    class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                             </div>
-                            <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-lg font-bold text-lg transition">
+                            <button type="submit"
+                                class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-lg font-bold text-lg transition">
                                 DOWNLOAD BROCHURE >>>
                             </button>
                         </form>
@@ -130,7 +134,7 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">PROJECT OVERVIEW</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            
+
             <div class="grid md:grid-cols-2 gap-8 mb-8">
                 <div class="text-center">
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Amrutha Platinum Towers</h3>
@@ -139,7 +143,7 @@
                     <h3 class="text-2xl font-bold text-gray-800 mb-4">Apartments</h3>
                 </div>
             </div>
-            
+
             <div class="bg-white rounded-lg shadow-lg p-8">
                 <div class="grid md:grid-cols-2 gap-8">
                     <div class="space-y-4">
@@ -186,7 +190,7 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">PRICING</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- 2 BHK Card -->
                 <div class="bg-blue-600 rounded-lg p-8 text-white text-center">
@@ -195,7 +199,7 @@
                     <div class="text-3xl font-bold mb-2">₹ 1.15Cr</div>
                     <div class="text-sm mb-6">1064 - 1348 Sq.Ft.</div>
                 </div>
-                
+
                 <!-- 2.5 BHK Card -->
                 <div class="bg-blue-600 rounded-lg p-8 text-white text-center">
                     <h3 class="text-2xl font-bold mb-2">2.5 BHK</h3>
@@ -203,7 +207,7 @@
                     <div class="text-3xl font-bold mb-2">₹ 1.43Cr</div>
                     <div class="text-sm mb-6">1348 - 1511 Sq.Ft.</div>
                 </div>
-                
+
                 <!-- 3 BHK Card -->
                 <div class="bg-blue-600 rounded-lg p-8 text-white text-center">
                     <h3 class="text-2xl font-bold mb-2">3 BHK</h3>
@@ -219,7 +223,7 @@
     <section class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold text-gray-800 mb-8">Schedule Your Site-Visit to Amrutha Platinum Towers</h2>
-            
+
             <!-- Countdown Timer -->
             <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
                 <div class="grid grid-cols-4 gap-4 text-center">
@@ -241,8 +245,9 @@
                     </div>
                 </div>
             </div>
-            
-            <button class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition">
+
+            <button
+                class="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition">
                 SCHEDULE MY SITE-VISIT
             </button>
         </div>
@@ -255,10 +260,10 @@
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">AMENITIES</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            
+
             <div class="text-center">
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    Swimming Pool, Kids Pool, Gym, Party Hall, Play Area, Badminton Court, Half Basketball Court, 
+                    Swimming Pool, Kids Pool, Gym, Party Hall, Play Area, Badminton Court, Half Basketball Court,
                     Jogging Track, Elder's Park, Open Gym, Table Tennis & Many More.
                 </p>
             </div>
@@ -266,96 +271,82 @@
     </section>
 
     <!-- Master Plan Section -->
-    <section id="floorplan" class="py-16 bg-gray-50">
+    <section id="floorplan" class=" ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">MASTER PLAN</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            
-            <div class="bg-white rounded-lg shadow-lg p-8">
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-gray-600 mb-2">Master Plan</div>
-                            <div class="text-gray-500">Detailed Layout View</div>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <div class="bg-gray-300 h-32 rounded-lg flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="text-lg font-bold text-gray-600">Floor Plan</div>
-                            </div>
-                        </div>
-                        <div class="bg-gray-300 h-32 rounded-lg flex items-center justify-center">
-                            <div class="text-center">
-                                <div class="text-lg font-bold text-gray-600">Building View</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <img src="Amrutha-Platinum-Towers-Master-Plan-New.jpg" alt="width:80px; height:80px;"
+                class="w-full rounded-lg shadow-lg h-[500px] object-center">
         </div>
     </section>
 
     <!-- Gallery Section -->
     <section id="gallery" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading -->
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">GALLERY</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-600 mb-2">Exterior View</div>
-                        <div class="text-gray-500">Building & Landscaping</div>
+
+            <!-- Gallery Container -->
+            <div class="flex flex-col space-y-6">
+                <!-- Row 1 -->
+                <div class="flex flex-col md:flex-row md:justify-between gap-6">
+                    <div class="flex-1 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img src="master 1.jpg" alt="Gallery Image 1"
+                            class="object-cover w-full h-64 hover:scale-105 transition-transform duration-500">
+                    </div>
+
+                    <div class="flex-1 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img src="mster2.jpg" alt="Gallery Image 2"
+                            class="object-cover w-full h-64 hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
-                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-600 mb-2">Swimming Pool</div>
-                        <div class="text-gray-500">Pool Area & Amenities</div>
+
+                <!-- Row 2 -->
+                <div class="flex flex-col md:flex-row md:justify-between gap-6">
+                    <div class="flex-1 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img src="mster3.jpg" alt="Gallery Image 3"
+                            class="object-cover w-full h-64 hover:scale-105 transition-transform duration-500">
                     </div>
-                </div>
-                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-600 mb-2">Entrance Gate</div>
-                        <div class="text-gray-500">Main Entrance</div>
-                    </div>
-                </div>
-                <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center">
-                    <div class="text-center">
-                        <div class="text-2xl font-bold text-gray-600 mb-2">Night View</div>
-                        <div class="text-gray-500">Illuminated Building</div>
+
+                    <div class="flex-1 bg-gray-100 rounded-lg flex items-center justify-center overflow-hidden">
+                        <img src="master4.jpg" alt="Gallery Image 4"
+                            class="object-cover w-full h-64 hover:scale-105 transition-transform duration-500">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+
     <!-- Location Map Section -->
     <section id="location" class="py-16 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Heading -->
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-800 mb-4">LOCATION MAP</h2>
                 <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            
+
+            <!-- Grid Layout -->
             <div class="grid lg:grid-cols-2 gap-8">
-                <!-- Map -->
+
+                <!-- Live Google Map -->
                 <div class="bg-white rounded-lg shadow-lg p-6">
-                    <div class="bg-gray-300 h-64 rounded-lg flex items-center justify-center mb-4">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-gray-600 mb-2">Interactive Map</div>
-                            <div class="text-gray-500">AMRUTHA PLATINUM TOWERS</div>
-                        </div>
+                    <div class="rounded-lg overflow-hidden h-72 md:h-96">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.115578279062!2d77.73710527484292!3d12.898634187409958!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae12e44b5d8ad7%3A0xa5484d1cc52b853!2sAmrutha%20Platinum%20Towers!5e0!3m2!1sen!2sin!4v1707450190214!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
                     </div>
                 </div>
-                
+
                 <!-- Proximities -->
-                <div class="bg-white rounded-lg shadow-lg p-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-center">
                     <h3 class="text-xl font-bold text-gray-800 mb-6">Key Proximities</h3>
                     <div class="space-y-4">
                         <div class="flex items-center">
@@ -384,29 +375,83 @@
         </div>
     </section>
 
+
     <!-- About Sections -->
     <section class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="space-y-8">
                 <!-- About Amrutha Platinum Towers -->
                 <div class="bg-gray-50 rounded-lg p-6">
-                    <button onclick="toggleAccordion('about1')" class="w-full flex justify-between items-center text-left">
+                    <button onclick="toggleAccordion('about1')"
+                        class="w-full flex justify-between items-center text-left">
                         <h3 class="text-xl font-bold text-gray-800">About Amrutha Platinum Towers</h3>
                         <i id="icon1" class="fas fa-chevron-down text-blue-600"></i>
                     </button>
                     <div id="about1" class="hidden mt-4 text-gray-700">
-                        <p>Amrutha Platinum Towers offers ready-to-move-in premium apartments with modern amenities and excellent connectivity in Whitefield, Bangalore.</p>
+                        <p>Amrutha Platinum Towers raises the skyline of Whitefield, one of Bangalore’s most coveted
+                            neighborhood.
+
+                            From its elegant contemporary design to its state-of-the-art internal plan features, Amrutha
+                            Platinum Towers promises to make dream homes a reality. With a home in Amrutha Platinum
+                            Towers you can expect the luxury and exclusivity of one of Bangalore’s premium address.
+
+                            A home in Amrutha Platinum Towers, makes you a part of Bangalore’s elite future. Here is
+                            your chance to live at an exclusive landmark. Nestled in the heart of Whitefield, Amrutha
+                            Platinum Towers is in close proximity to all daily destinations, be it work places towards
+                            Marathahalli and ITPL on one side or towards Sarjapur Road and Electronic City on the other.
+                            The vicinity has the best of educational institutions, health care options, shopping and
+                            fine dining destinations, making it a merry place to live in for your entire family !!
+
+                            Amrutha Platinum Towers promises its residents a life of exclusivity. Every aspect of the
+                            project has been planned to perfection and speaks of architectural excellence. The project
+                            stands tall with Ground plus 9 floors in 2 blocks with 2 & 3BHK homes.
+
+                            You get the feel of independent homes as there are almost no common walls and there is
+                            excellent natural lighting and ventilation. The wide corridors make for smooth movement. The
+                            internal layout of each home optimizes space utilization and gives you the freedom of doing
+                            up your home in the way you always dreamt of doing it !!
+
+                            Life at Amrutha Platinum Towers is all about having leisure within your reach. The exquisite
+                            lifestyle amenities are the hallmarks of Amrutha Platinum Towers. You can enjoy an active
+                            lifestyle and at the same time rest assured that your family is safe always.</p>
                     </div>
                 </div>
-                
+
                 <!-- About Amrutha Constructions -->
                 <div class="bg-gray-50 rounded-lg p-6">
-                    <button onclick="toggleAccordion('about2')" class="w-full flex justify-between items-center text-left">
+                    <button onclick="toggleAccordion('about2')"
+                        class="w-full flex justify-between items-center text-left">
                         <h3 class="text-xl font-bold text-gray-800">About Amrutha Constructions</h3>
                         <i id="icon2" class="fas fa-chevron-down text-blue-600"></i>
                     </button>
                     <div id="about2" class="hidden mt-4 text-gray-700">
-                        <p>Amrutha Constructions is a trusted name in real estate development, committed to delivering quality homes with modern amenities and excellent customer service.</p>
+                        <p>A reputation built over delivering utmost quality homes AMRUTHA BUILDERS
+
+
+
+                            Since its inception in 1999, Amrutha Shelters has taken pride in its ability to craft
+                            one-of-a-kind homes. Recognized for quality and innovation, the company always focuses on
+                            the work process, the flow, and most importantly, the timely schedule and on-time completion
+                            of each project. While professionalism, reliability, and teamwork are the foundations of the
+                            company, providing utmost importance to customers' money is its hallmark. Headquartered in
+                            the Silicon Valley of India - Bengaluru, a team of qualified and experienced architects,
+                            structural engineers, civil engineers, marketing executives and other construction related
+                            consultants and professionals strengthen company's efforts.
+
+
+                            Experience a life where the everyday travel to work is minimized where your home is an
+                            investment and your access to Whitefield’s hotspots become to convenient. With a host of
+                            luxuries and amenities that help you to make the most of every day, this is truly the very
+                            essence of fine living.
+
+
+
+                            Broaden your horizons and step into a new world of utmost comforts and ultimate luxuries.
+                            Gain a true sense of belonging, superior social connection with likeminded people, and a
+                            truly life changing experience in elegant enclaves humming with fresh energy and vibrant
+                            sophistication. Welcome to the online world of Amrutha Shelters, a dynamic and focused
+                            company that delivers the highest standard of homes that is contemporary in design and
+                            uncompromising in excellence. </p>
                     </div>
                 </div>
             </div>
@@ -423,13 +468,17 @@
                 </div>
                 <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
             </div>
-            
+
             <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
                 <form class="space-y-4">
-                    <input type="text" placeholder="Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <input type="tel" placeholder="Phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <input type="email" placeholder="Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-lg font-bold text-lg transition">
+                    <input type="text" placeholder="Name"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="tel" placeholder="Phone"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <input type="email" placeholder="Email"
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button type="submit"
+                        class="w-full bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-lg font-bold text-lg transition">
                         REQUEST INSTANT CALLBACK
                     </button>
                 </form>
@@ -437,54 +486,91 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- CREDAI Logo -->
-            <div class="text-center mb-8">
-                <div class="flex items-center justify-center mb-4">
-                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
-                        <span class="text-gray-900 font-bold">C</span>
-                    </div>
-                    <span class="text-lg font-semibold">MEMBER OF CREDAI BENGALURU</span>
-                </div>
+    <footer class="bg-white text-gray-700 text-sm border-t border-gray-200 relative">
+        <div class="max-w-6xl mx-auto px-6 py-10 text-center space-y-4">
+            <!-- CREDAI Member -->
+            <div class="space-y-2">
+                <p class="uppercase tracking-widest text-gray-700 font-medium">Member of</p>
+                <img src="fotter-1.png" alt="CREDAI Bengaluru" class="mx-auto h-[100px] object-contain" />
             </div>
-            
+
+            <!-- Website + Developer Info -->
+            <p class="text-gray-600 leading-relaxed">
+                <a href="http://127.0.0.1:5500/" class="text-gray-800 hover:underline font-medium">
+                    www.amruthaplatinumtowers.com
+                </a>
+                |
+                <span class="font-semibold text-gray-800">Amrutha Platinum Towers</span>
+                Promoted by
+                <span class="font-semibold text-gray-800">
+                    Amrutha Rama Constructions Pvt. Ltd.
+                </span>
+                (Project RERA: PRM/KA/RERA/1251/446/PR/180420/001525)
+            </p>
+
+            <!-- Digital Marketing Partner -->
+            <p>
+                <span class="text-gray-600">Digital Marketing Partner - </span>
+                <a href="https://www.a-zdigitalmarketing.com/" class="text-red-600 font-semibold hover:underline">
+                    A-Z Digital Marketing
+                </a>
+            </p>
+
             <!-- Disclaimer -->
-            <div class="mb-8">
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    <strong>Disclaimer:</strong> The content on this website is for information purposes only. Prices, specifications, and availability are subject to change without notice. 
-                    Images are for representation purposes only. Please verify all details before making any decisions.
+            <div class="text-justify text-xs leading-relaxed text-gray-600 max-w-5xl mx-auto">
+                <p>
+                    Disclaimer: The plans, specifications, images and other details herein are only indicative and
+                    subject to approval of the concerned authorities.
+                    The Developer / Owner reserves the right to change any or all of these in the interest of the
+                    development, without prior notice or obligation.
+                    Artist’s impressions are used to illustrate amenities, specifications, images and other details and
+                    these may be applicable to select apartments only.
+                    This website does not constitute an offer and/or contract of any type between the Developer / Owner
+                    and the recipient.
+                    Any Purchaser / Lessee of this development shall be governed by the terms and conditions of the
+                    agreement for sale/lease entered into between the parties,
+                    and no details mentioned in this website shall in any way govern such transactions unless as may be
+                    otherwise expressly provided in the agreement for sale/lease
+                    by the Developer / Owner. The Developer / Owner does not warrant or assume any liability or
+                    responsibility for the accuracy or completeness of any information contained herein.
+                    <br><br>
+                    Privacy Policy: We collect information from you when you fill out a form on our site. While filling
+                    out a form, you may be asked to enter your: name, e-mail address and phone number.
+                    You may, however, visit our site anonymously. Any of the information we collect from you is to
+                    personalize your experience, to improve our website and to improve customer service.
+                    Any data collected will not be shared with any 3rd party.
                 </p>
             </div>
-            
-            <!-- Copyright -->
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <div class="text-sm text-gray-400">
-                    © 2023 Amrutha Constructions. All Rights Reserved.
-                </div>
-                <div class="mt-4 md:mt-0">
-                    <div class="w-16 h-8 bg-gray-700 rounded flex items-center justify-center">
-                        <span class="text-xs text-gray-400">Protected by CopyScape</span>
-                    </div>
-                </div>
+
+            <!-- Copyscape Badge -->
+            <div class="flex justify-center">
+                <img src="fotter-last.png" alt="Protected by Copyscape " class="h-[120px] object-center" />
             </div>
         </div>
+
+        <!-- Floating WhatsApp Buttons -->
+        <a href="https://wa.me/919035086850"
+            class="fixed bottom-6 left-6 bg-green-500 rounded-full p-3 shadow-lg hover:bg-green-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-7 h-7">
+                <path
+                    d="M20.52 3.48A11.76 11.76 0 0012 0a11.76 11.76 0 00-8.52 3.48A11.76 11.76 0 000 12a11.76 11.76 0 003.48 8.52A11.76 11.76 0 0012 24a11.76 11.76 0 008.52-3.48A11.76 11.76 0 0024 12a11.76 11.76 0 00-3.48-8.52zM12 22a9.88 9.88 0 01-5.3-1.55l-.38-.22-3.94 1.03 1.05-3.84-.25-.39A9.91 9.91 0 012.1 12a9.9 9.9 0 019.9-9.9A9.9 9.9 0 0121.9 12a9.9 9.9 0 01-9.9 10z" />
+                <path
+                    d="M17.48 14.26c-.29-.14-1.72-.85-1.98-.95s-.46-.14-.65.14-.75.95-.92 1.15-.34.22-.63.07a8.03 8.03 0 01-2.36-1.45 8.74 8.74 0 01-1.6-1.97c-.17-.29 0-.44.12-.58.12-.12.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.65-1.56-.89-2.13-.23-.55-.47-.47-.65-.48h-.55c-.19 0-.51.07-.77.36s-1 1-1 2.44 1.02 2.83 1.16 3.03c.14.19 2 3.04 4.83 4.27.68.29 1.2.46 1.61.59.68.22 1.3.19 1.8.12.55-.08 1.72-.7 1.97-1.37.24-.67.24-1.25.17-1.37-.07-.11-.26-.19-.55-.33z" />
+            </svg>
+        </a>
+
+        <a href="tel:+919035086850"
+            class="fixed bottom-6 right-6 bg-green-500 rounded-full p-3 shadow-lg hover:bg-green-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" class="w-7 h-7">
+                <path
+                    d="M22 16.92v3a2.1 2.1 0 01-2.3 2.1A20.87 20.87 0 013 5.3 2.1 2.1 0 015.1 3h3a1 1 0 011 .75 13.05 13.05 0 00.7 2.3 1 1 0 01-.23 1L8.09 8.91a16 16 0 007 7l1.9-1.5a1 1 0 011-.23 13.05 13.05 0 002.3.7 1 1 0 01.75 1z" />
+            </svg>
+        </a>
     </footer>
 
-    <!-- Floating Contact Buttons -->
-    <div class="fixed bottom-6 left-6 z-50">
-        <button class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition mb-4">
-            <i class="fab fa-whatsapp text-xl"></i>
-        </button>
-    </div>
-    
-    <div class="fixed bottom-6 right-6 z-50">
-        <button class="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition">
-            <i class="fas fa-phone text-xl"></i>
-        </button>
-    </div>
+
 
     <script src="script.js"></script>
 </body>
+
 </html>
