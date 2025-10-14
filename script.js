@@ -12,6 +12,19 @@ function toggleMobileMenu() {
     }
 }
 
+ // WhatsApp functionality
+  document.addEventListener('DOMContentLoaded', function () {
+    const whatsappButtons = document.querySelectorAll('.whatsapp');
+
+    whatsappButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const message = 'Hi, I am interested in Amrutha Platinum Towers. Please provide more information.';
+        const whatsappUrl = `https://wa.me/919035086850?text=${encodeURIComponent(message)}`;
+        window.open(whatsappUrl, '_blank'); // Opens WhatsApp in new tab
+      });
+    });
+  });
+
 // Close mobile menu on outside click
 document.addEventListener('click', function(event) {
     const menu = document.getElementById('mobileMenu');
