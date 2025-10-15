@@ -1,16 +1,203 @@
-// Mobile Menu Toggle
+
+        // Popup Form Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const popupOverlay = document.getElementById('popupOverlay');
+            const popupForm = document.getElementById('popupForm');
+            const closePopup = document.getElementById('closePopup');
+            const contactForm = document.getElementById('contactForm');
+            const submitBtn = document.getElementById('submitBtn');
+
+            // Show popup after 5 seconds
+            setTimeout(() => {
+                showPopup();
+            }, 5000);
+
+            // Show popup function
+            function showPopup() {
+                popupOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+                setTimeout(() => {
+                    popupForm.classList.remove('scale-95', 'opacity-0');
+                    popupForm.classList.add('scale-100', 'opacity-100');
+                }, 50);
+            }
+
+            // Hide popup function
+            function hidePopup() {
+                popupForm.classList.remove('scale-100', 'opacity-100');
+                popupForm.classList.add('scale-95', 'opacity-0');
+                document.body.style.overflow = ''; // Restore scrolling
+                setTimeout(() => {
+                    popupOverlay.classList.add('hidden');
+                }, 500);
+            }
+
+            // Close popup events
+            closePopup.addEventListener('click', hidePopup);
+            popupOverlay.addEventListener('click', function(e) {
+                if (e.target === popupOverlay) {
+                    hidePopup();
+                }
+            });
+
+            // Close popup on Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && !popupOverlay.classList.contains('hidden')) {
+                    hidePopup();
+                }
+            });
+
+            // Add click event to all buttons (except WhatsApp buttons)
+            document.addEventListener('click', function(e) {
+                if (e.target.tagName === 'BUTTON' && 
+                    !e.target.classList.contains('whatsapp') && 
+                    !e.target.closest('#popupOverlay') &&
+                    e.target.id !== 'mobileMenuButton') {
+                    e.preventDefault();
+                    showPopup();
+                }
+            });
+
+            // Form validation and submission
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const name = document.getElementById('popupName').value.trim();
+                const phone = document.getElementById('popupPhone').value.trim();
+                const email = document.getElementById('popupEmail').value.trim();
+                const comments = document.getElementById('popupComments').value.trim();
+
+                // Validation
+                if (!name) {
+                    alert('Please enter your name.');
+                    return;
+                }
+
+                if (!phone) {
+                    alert('Please enter your phone number.');
+                    return;
+                }
+
+                // Phone validation (10 digits)
+                const phoneRegex = /^[0-9]{10}$/;
+                if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
+                    alert('Please enter a valid 10-digit phone number.');
+                    return;
+                }
+
+                // Email validation (if provided)
+                if (email) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailRegex.test(email)) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+                }
+
+                // Show loading state
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Submitting...';
+                submitBtn.disabled = true;
+
+                // Prepare form data
+                const formData = new FormData();
+                formData.append('name', name);
+                formData.append('phone', phone);
+                formData.append('email', email);
+                formData.append('comments', comments);
+                formData.append('timestamp', new Date().toISOString());
+
+                // Submit to Google Sheets
+                fetch('https://script.google.com/macros/s/AKfycbwcYAs-8shmPyINhplL8EnJQ-v-uIPjQKbm2J3Og_x8srfWvxuSrh4WbvtVsdBZVHyV/exec', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.result === 'success') {
+                        // Success
+                        alert('Thank you! Your message has been submitted successfully. We will contact you soon.');
+                        contactForm.reset();
+                        hidePopup();
+                    } else {
+                        throw new Error(data.error || 'Submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('There was an error submitting your message. Please try again.');
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
+            });
+
+            // Phone number formatting for popup form
+            document.getElementById('popupPhone').addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 10) {
+                    value = value.slice(0, 10);
+                }
+                e.target.value = value;
+            });
+        });
+    
+
+// Mobile Menu Toggle with improved animations
 function toggleMobileMenu() {
     const menu = document.getElementById('mobileMenu');
     const button = document.getElementById('mobileMenuButton');
+    const hamburgerIcon = button.querySelector('svg');
     
     if (menu.classList.contains('hidden')) {
+        // Show menu
         menu.classList.remove('hidden');
+        menu.style.maxHeight = '0px';
+        menu.style.opacity = '0';
+        
+        // Animate menu appearance
+        requestAnimationFrame(() => {
+            menu.style.maxHeight = '500px';
+            menu.style.opacity = '1';
+        });
+        
+        // Transform hamburger to X
+        hamburgerIcon.style.transform = 'rotate(90deg)';
+        hamburgerIcon.innerHTML = `
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        `;
+        
         button.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
     } else {
-        menu.classList.add('hidden');
+        // Hide menu
+        menu.style.maxHeight = '0px';
+        menu.style.opacity = '0';
+        
+        setTimeout(() => {
+            menu.classList.add('hidden');
+        }, 300);
+        
+        // Transform X back to hamburger
+        hamburgerIcon.style.transform = 'rotate(0deg)';
+        hamburgerIcon.innerHTML = `
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        `;
+        
         button.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = ''; // Restore scrolling
     }
 }
+
+// Add event listener for mobile menu button
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobileMenuButton');
+    if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+    }
+});
 
  // WhatsApp functionality
   document.addEventListener('DOMContentLoaded', function () {
@@ -30,9 +217,8 @@ document.addEventListener('click', function(event) {
     const menu = document.getElementById('mobileMenu');
     const button = document.getElementById('mobileMenuButton');
     
-    if (!menu.contains(event.target) && !button.contains(event.target)) {
-        menu.classList.add('hidden');
-        button.setAttribute('aria-expanded', 'false');
+    if (!menu.contains(event.target) && !button.contains(event.target) && !menu.classList.contains('hidden')) {
+        toggleMobileMenu();
     }
 });
 
@@ -40,10 +226,25 @@ document.addEventListener('click', function(event) {
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
         const menu = document.getElementById('mobileMenu');
-        const button = document.getElementById('mobileMenuButton');
-        menu.classList.add('hidden');
-        button.setAttribute('aria-expanded', 'false');
+        if (!menu.classList.contains('hidden')) {
+            toggleMobileMenu();
+        }
     }
+});
+
+// Close mobile menu when clicking on navigation links
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            if (!menu.classList.contains('hidden')) {
+                setTimeout(() => {
+                    toggleMobileMenu();
+                }, 200); // Small delay for better UX
+            }
+        });
+    });
 });
 
 // Accordion functionality
